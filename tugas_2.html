@@ -1,78 +1,178 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profil Biodata Saya</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* === STYLE DASAR === */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8faff;
+  color: #333;
+}
 
-  <!-- NAVBAR -->
-  <header>
-    <div class="container">
-      <h2 class="brand">Brand</h2>
-      <nav>
-        <a href="#header">Header</a>
-        <a href="#about">Biodata</a>
-        <a href="#portfolio">Portofolio</a>
-      </nav>
-    </div>
-  </header>
+/* === NAVBAR === */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-  <!-- HEADER SECTION -->
-  <section id="header" class="header-section">
-    <div class="text">
-      <h1>Selamat Datang di Website Saya</h1>
-      <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
-      <button>Pelajari Lebih Lanjut</button>
-    </div>
-    <div class="image">
-      <img src="4x6 foto profesional.png" alt="Foto Profil">
-    </div>
-  </section>
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
 
-  <!-- ABOUT ME SECTION -->
-  <section id="about" class="about-section">
-    <h2>About Me</h2>
-    <p>A brief introduction about myself</p>
+header .brand {
+  font-size: 22px;
+  font-weight: bold;
+}
 
-    <div class="grid-biodata">
-      <div><strong>Full Name:</strong> Silvia Setiawati</div>
-      <div><strong>Education:</strong> D3 Sistem Informasi</div>
-      <div><strong>Pekerjaan:</strong> Fresh Graduate</div>
-      <div><strong>Contact:</strong> setiawatisilvia20@gmail.com</div>
-      <div><strong>Hobi:</strong> Makeup, Membaca</div>
-      <div><strong>Alamat:</strong> Karawang</div>
-    </div>
-  </section>
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
 
-  <!-- PORTFOLIO SECTION -->
-  <section id="portfolio" class="portfolio-section">
-    <h2>Portofolio</h2>
-    <div class="grid-portfolio">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Proyek 1">
-        <h3>Proyek 1</h3>
-        <p>Deskripsi proyek 1.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Proyek 2">
-        <h3>Proyek 2</h3>
-        <p>Deskripsi proyek 2.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Proyek 3">
-        <h3>Proyek 3</h3>
-        <p>Deskripsi proyek 3.</p>
-      </div>
-    </div>
-  </section>
+header nav a:hover {
+  color: #ffdd57;
+}
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Silvia Setiawati. All rights reserved.</p>
-  </footer>
+/* === HEADER SECTION === */
+.header-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  padding: 50px 10%;
+  background: white;
+  gap: 20px;
+}
 
-</body>
-</html>
+.header-section h1 {
+  font-size: 28px;
+  color: #1e1e1e;
+}
+
+.header-section p {
+  color: #555;
+  margin: 10px 0 20px;
+}
+
+.header-section button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header-section button:hover {
+  background-color: #0056b3;
+}
+
+.header-section img {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 250px;
+  float: left; /* geser foto ke kiri */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* === ABOUT SECTION === */
+.about-section {
+  text-align: center;
+  padding: 50px 10%;
+  background-color: #f0f4ff;
+}
+
+/* === WARNA TEKS BIODATA === */
+.grid-biodata div strong {
+  color: #007bff; /* warna biru utama */
+}
+
+
+.about-section h2 {
+  color: #007bff;
+}
+
+.grid-biodata {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.grid-biodata div {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* === PORTFOLIO SECTION === */
+.portfolio-section {
+  padding: 50px 10%;
+  background: white;
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  color: #007bff;
+}
+
+.grid-portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #f8faff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+  }
+
+  .header-section {
+    padding: 30px 5%;
+  }
+
+  .about-section, .portfolio-section {
+    padding: 30px 5%;
+  }
+}
